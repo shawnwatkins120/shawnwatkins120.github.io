@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Epsilon 3A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a3d0a;
+            color: #c0ffb3;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #064e06;
+            color: white;
+            padding: 15px;
+        }
+
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            background-color: #0b5d0b;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            background-color: white;
+        }
+
+        input[type="submit"] {
+            background-color: #064e06;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0b5d0b;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Login to Epsilon 3A</h1>
+    </header>
+
+    <div class="login-container">
+        <h2>Enter Your Credentials</h2>
+        <form action="welcome.html" method="post">
+            <label for="username">Username or Email:</label><br>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Epsilon Tech</p>
+    </footer>
+
+</body>
+</html>
