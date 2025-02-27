@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Epsilon 3 - Night Vision Goggles</title>
+    <title>Epsilon 3A - Technology</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,6 +23,7 @@
         nav {
             background-color: #087108;
             padding: 10px;
+            position: relative;
         }
 
         nav a {
@@ -32,44 +33,185 @@
             font-weight: bold;
         }
 
-        main {
-            padding: 20px;
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
         }
 
-        .button {
+        nav ul li {
             display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #064e06;
+            top: 30px;
+        }
+
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown li {
+            width: 200px;
+        }
+
+        .dropdown li a {
+            padding: 10px;
+            display: block;
+        }
+
+        .slider-container {
+            padding: 20px;
+            text-align: center;
             background-color: #0b5d0b;
+            border-radius: 10px;
+        }
+
+        .slider {
+            width: 80%;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .login-btn {
+            background-color: #064e06;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
-            margin-top: 15px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
             border-radius: 5px;
         }
 
-        footer {
-            margin-top: 20px;
+        .login-btn:hover {
+            background-color: #0b5d0b;
+        }
+
+        form {
+            width: 80%;
+            margin: auto;
+            background-color: #0b5d0b;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            background-color: white;
+        }
+
+        input[type="submit"] {
+            background-color: #064e06;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Epsilon 3 - Night Vision Goggles</h1>
+        <h1>Epsilon 3A - The Ultimate Night Vision Technology</h1>
     </header>
 
     <nav>
-        <a href="https://github.com/shawnwatkins120" target="_blank">Creator</a>
-        <a href="technology.html">Technology</a>
-        <a href="buy.html">Buy Now</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="technology.html">Technology</a>
+                <ul class="dropdown">
+                    <li><a href="infrared.html">Infrared Technology</a></li>
+                    <li><a href="zoom.html">Zoom Function</a></li>
+                    <li><a href="battery.html">Battery Life</a></li>
+                </ul>
+            </li>
+            <li><a href="buy.html">Buy Now</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Login Button in top right -->
+        <a href="login.html" class="login-btn">Login</a>
     </nav>
 
     <main>
-        <h2>See in the Dark Like Never Before</h2>
-        <p>Epsilon 3 Night-Vision goggles provide enhanced night vision for adventures, security, and tactical purposes.</p>
+        <h2>Advanced Night Vision Technology</h2>
+        <p>Epsilon 3A uses military-grade infrared sensors and adaptive brightness for clear vision in total darkness.</p>
+        <p>With real-time image processing and enhanced zoom, Epsilon 3A ensures sharp visuals in any environment.</p>
+
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="image1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="image2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="image3.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let slides = document.getElementsByClassName("mySlides");
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                slides[slideIndex-1].style.display = "block";  
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+
+        <!-- Price Slider -->
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="50" class="slider" id="priceRange">
+            <p>Price: $<span id="priceValue">50</span></p>
+        </div>
+
+        <script>
+            let slider = document.getElementById("priceRange");
+            let priceValue = document.getElementById("priceValue");
+            slider.oninput = function() {
+                priceValue.innerHTML = slider.value;
+            }
+        </script>
     </main>
 
     <footer>
-        <p>Epsilon 3 Technologies</p>
+        <p>&copy; 2025 Epsilon Tech</p>
     </footer>
 
 </body>
