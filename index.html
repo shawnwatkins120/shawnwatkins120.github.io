@@ -71,26 +71,11 @@
             display: block;
         }
 
-        .slider-container {
-            padding: 20px;
-            text-align: center;
-            background-color: #0b5d0b;
-            border-radius: 10px;
-        }
-
-        .slider {
-            width: 80%;
-            margin: 10px 0;
-        }
-
-        p {
-            font-size: 1.2em;
-        }
-
         .slideshow-container {
             max-width: 1000px;
             position: relative;
             margin: auto;
+            margin-top: 30px;
         }
 
         .mySlides {
@@ -112,28 +97,6 @@
             background-color: #0b5d0b;
         }
 
-        form {
-            width: 80%;
-            margin: auto;
-            background-color: #0b5d0b;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        input[type="text"], input[type="email"], textarea {
-            width: 100%;
-            padding: 8px;
-            margin: 10px 0;
-            background-color: white;
-        }
-
-        input[type="submit"] {
-            background-color: #064e06;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -166,7 +129,7 @@
         <p>Epsilon 3A uses military-grade infrared sensors and adaptive brightness for clear vision in total darkness.</p>
         <p>With real-time image processing and enhanced zoom, Epsilon 3A ensures sharp visuals in any environment.</p>
 
-        <!-- Slideshow -->
+        <!-- Rotating Photo Gallery (Slideshow) -->
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <img src="image1.jpg" style="width:100%">
@@ -192,20 +155,6 @@
                 if (slideIndex > slides.length) {slideIndex = 1}    
                 slides[slideIndex-1].style.display = "block";  
                 setTimeout(showSlides, 2000); // Change image every 2 seconds
-            }
-        </script>
-
-        <!-- Price Slider -->
-        <div class="slider-container">
-            <input type="range" min="0" max="100" value="50" class="slider" id="priceRange">
-            <p>Price: $<span id="priceValue">50</span></p>
-        </div>
-
-        <script>
-            let slider = document.getElementById("priceRange");
-            let priceValue = document.getElementById("priceValue");
-            slider.oninput = function() {
-                priceValue.innerHTML = slider.value;
             }
         </script>
     </main>
