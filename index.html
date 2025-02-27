@@ -24,7 +24,6 @@
             background-color: #087108;
             padding: 10px;
             position: relative;
-            z-index: 10; /* Ensure the nav has a higher stacking order */
         }
 
         nav a {
@@ -57,7 +56,7 @@
             position: absolute;
             background-color: #064e06;
             top: 30px;
-            z-index: 20; /* Ensure the dropdown is above other elements */
+            z-index: 20;
         }
 
         nav ul li:hover .dropdown {
@@ -85,10 +84,10 @@
         }
 
         .mySlides img {
-            width: 60% !important;  /* Force the width change */
-            height: auto !important;  /* Maintain aspect ratio */
+            width: 60% !important;
+            height: auto !important;
             margin: auto;
-            z-index: 1; /* Ensure images are behind the dropdown */
+            z-index: 1;
         }
 
         .login-btn {
@@ -96,10 +95,11 @@
             color: white;
             padding: 10px 20px;
             text-decoration: none;
-            position: absolute;
-            top: 5px;
-            right: 15px;
             border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 20px;
+            transition: background-color 0.3s ease;
         }
 
         .login-btn:hover {
@@ -126,7 +126,7 @@
             <li><a href="buy.html">Buy Now</a></li>
         </ul>
 
-        <!-- Login Button in top right -->
+        <!-- Login Button in the navigation bar -->
         <a href="login.html" class="login-btn">Login</a>
     </nav>
 
