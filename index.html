@@ -23,7 +23,9 @@
         nav {
             background-color: #087108;
             padding: 10px;
-            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         nav a {
@@ -38,6 +40,9 @@
             padding: 0;
             margin: 0;
             text-align: center;
+            flex: 1;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
@@ -83,7 +88,7 @@
         }
 
         .mySlides img {
-            width: 60%;  
+            width: 100%;  
             height: auto;  
             margin: auto;  
         }
@@ -93,10 +98,8 @@
             color: white;
             padding: 10px 20px;
             text-decoration: none;
-            position: absolute;
-            top: 5px;
-            right: 15px;
             border-radius: 5px;
+            margin-left: 20px;
         }
 
         .login-btn:hover {
@@ -133,23 +136,22 @@
     </header>
 
     <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="technology.html">Technology</a>
-            <ul class="dropdown">
-                <li><a href="infrared.html">Infrared Technology</a></li>
-                <li><a href="zoom.html">Zoom Function</a></li>
-                <li><a href="battery.html">Battery Life</a></li>
-            </ul>
-        </li>
-        <li><a href="buy.html">Buy Now</a></li>
-        <li><a href="comparison.html">3A vs 3</a></li> <!-- New Link -->
-    </ul>
-
-    <!-- Login Button in top right -->
-    <a href="login.html" class="login-btn">Login</a>
-</nav>
-
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="technology.html">Technology</a>
+                <ul class="dropdown">
+                    <li><a href="infrared.html">Infrared Technology</a></li>
+                    <li><a href="zoom.html">Zoom Function</a></li>
+                    <li><a href="battery.html">Battery Life</a></li>
+                </ul>
+            </li>
+            <li><a href="buy.html">Buy Now</a></li>
+            <li><a href="comparison.html">3A vs 3</a></li> <!-- New Link -->
+        </ul>
+        
+        <!-- Login Button on the Right -->
+        <a href="login.html" class="login-btn">Login</a>
+    </nav>
 
     <main>
         <h2>Advanced Night Vision Technology</h2>
@@ -184,10 +186,6 @@
                 setTimeout(showSlides, 2000); // Change image every 2 seconds
             }
         </script>
-
-        
-        
-
     </main>
 
     <footer>
