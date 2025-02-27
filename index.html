@@ -56,7 +56,6 @@
             position: absolute;
             background-color: #064e06;
             top: 30px;
-            z-index: 20;
         }
 
         nav ul li:hover .dropdown {
@@ -84,10 +83,9 @@
         }
 
         .mySlides img {
-            width: 60% !important;
-            height: auto !important;
-            margin: auto;
-            z-index: 1;
+            width: 60%;  
+            height: auto;  
+            margin: auto;  
         }
 
         .login-btn {
@@ -95,15 +93,36 @@
             color: white;
             padding: 10px 20px;
             text-decoration: none;
+            position: absolute;
+            top: 5px;
+            right: 15px;
             border-radius: 5px;
-            font-weight: bold;
-            display: inline-block;
-            margin-left: 20px;
-            transition: background-color 0.3s ease;
         }
 
         .login-btn:hover {
             background-color: #0b5d0b;
+        }
+
+        .section {
+            margin: 50px 0;
+        }
+
+        .section h2 {
+            color: #0b5d0b;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .button {
+            background-color: #0b5d0b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -126,7 +145,7 @@
             <li><a href="buy.html">Buy Now</a></li>
         </ul>
 
-        <!-- Login Button in the navigation bar -->
+        <!-- Login Button in top right -->
         <a href="login.html" class="login-btn">Login</a>
     </nav>
 
@@ -163,6 +182,55 @@
                 setTimeout(showSlides, 2000); // Change image every 2 seconds
             }
         </script>
+
+        <!-- Epsilon 3A Features Section -->
+        <div class="section" id="features">
+            <h2>Epsilon 3A Features</h2>
+            <p>The Epsilon 3A comes equipped with cutting-edge features designed for unparalleled night vision performance:</p>
+            <ul>
+                <li>Infrared Sensors for optimal low-light vision</li>
+                <li>Adaptive Brightness for various environments</li>
+                <li>High-definition Zoom for enhanced detail</li>
+                <li>Real-time image processing</li>
+                <li>Durable, military-grade construction</li>
+            </ul>
+        </div>
+
+        <!-- Epsilon 3A Options Section -->
+        <div class="section" id="options">
+            <h2>Epsilon 3A Options</h2>
+            <p>Choose the right configuration for your needs:</p>
+            <ul>
+                <li>Standard Model: Includes basic infrared sensors</li>
+                <li>Advanced Model: Adds zoom and enhanced image processing</li>
+                <li>Pro Model: Includes all features plus longer battery life and extra durability</li>
+            </ul>
+        </div>
+
+        <!-- Advantages Over Epsilon 3 -->
+        <div class="section" id="advantages">
+            <h2>Advantages of Epsilon 3A over Epsilon 3</h2>
+            <p>The Epsilon 3A outperforms its predecessor in several key areas:</p>
+            <ul>
+                <li>Improved infrared sensor technology for clearer vision in total darkness</li>
+                <li>Enhanced zoom capabilities for better target identification</li>
+                <li>Adaptive brightness for better performance in different lighting conditions</li>
+                <li>Real-time image processing for faster and more accurate viewing</li>
+            </ul>
+        </div>
+
+        <!-- Epsilon 3A Pricing -->
+        <div class="section" id="pricing">
+            <h2>Epsilon 3A Prices</h2>
+            <p>Choose from the following pricing options:</p>
+            <ul>
+                <li>Standard Model: $499</li>
+                <li>Advanced Model: $699</li>
+                <li>Pro Model: $899</li>
+            </ul>
+            <a href="buy.html" class="button">Order Now</a>
+        </div>
+
     </main>
 
     <footer>
